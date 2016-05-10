@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Building</th>
+    <th>Address</th>
+    <th>Floor Area</th>
+    <th>Site EUI (kBtu/ft2)</th>
+    <th>GHG Emissions</th>
+  </tr>
+  <% @locations.each do |location| %>
+    <tr>
+      <td><%= location['building_name'] %></td>
+      <td><%= location['building_address'] %></td>
+      <td><%= location['floor_area'] %></td>
+      <td><%= location['2015_site_eui'] %></td>
+      <td><%= location["2011_total_ghg_emissions_(metric_tons_co2e)"] %></td>
+    </tr>
+  <% end %>
+</table>
